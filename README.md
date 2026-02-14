@@ -6,6 +6,13 @@
 
 Instead, we can leverage containerization technology to run ROS on any distro, by using [Distrobox](https://distrobox.it).
 
+- [Setup Distrobox for ROS / ROS 2](#setup-distrobox-for-ros--ros-2)
+- [What is Distrobox?](#what-is-distrobox)
+- [Installation](#installation)
+  - [Install Distrobox](#install-distrobox)
+  - [Create a Distrobox Container](#create-a-distrobox-container)
+  - [Setting Up `.bashrc`](#setting-up-bashrc)
+
 # What is Distrobox?
 
 [Distrobox](https://distrobox.it) is a tool that allows you to create and manage containerized environments using Podman or Docker. It provides a simple interface to create and manage containers, making it easy to run applications in isolated environments. Distrobox is designed to be lightweight and seamlessly integrate with your host system, allowing you to access files and devices from within the container.
