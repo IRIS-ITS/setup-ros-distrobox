@@ -1,4 +1,4 @@
-![Inside a Distrobox container](https://github.com/IRIS-ITS/setup-ros-distrobox/raw/main/distrobox.png)
+![Inside a Distrobox container](https://github.com/IRIS-ITS/setup-ros-distrobox/raw/main/images/distrobox.png)
 
 # Setup Distrobox for ROS / ROS 2
 
@@ -96,8 +96,8 @@ Then, contuinue to installing the [Dev Containers extension](https://marketplace
 /home/<youruser>/.local/bin/podman-host
 ```
 
-![VS Code Dev Containers settings](https://github.com/IRIS-ITS/setup-ros-distrobox/raw/main/docker-path.png)
+![VS Code Dev Containers settings](https://github.com/IRIS-ITS/setup-ros-distrobox/raw/main/images/docker-path.png)
 
 After that, you should be able to open a folder inside the Distrobox container by opening Command Palette (Ctrl + Shift + P) and searching for "Attach to Running Container". Then, select the container you want to attach to (e.g., ros1) and select the folder you want to open.
 
-![Attach to Distrobox](https://github.com/IRIS-ITS/setup-ros-distrobox/raw/main/attach-to-distrobox.png)
+![Attach to Distrobox](https://github.com/IRIS-ITS/setup-ros-distrobox/raw/main/images/attach-to-distrobox.png)
