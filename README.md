@@ -1,3 +1,5 @@
+![Inside a Distrobox container](https://github.com/IRIS-ITS/setup-ros-distrobox/raw/main/distrobox.png)
+
 # Setup Distrobox for ROS / ROS 2
 
 [Robot Operating System (ROS)](https://www.ros.org) is highly tied to a specific Ubuntu version. For example, latest ROS 1 release, [Noetic](https://wiki.ros.org/noetic), only officially supports Ubuntu 20.04, while ROS 2 [Humble](https://docs.ros.org/en/humble) only supports Ubuntu 22.04. Even though building ROS from source is an option, we will need to do the same for every dependencies, that can be installed simply with `apt` on officially supported distro.
@@ -20,8 +22,6 @@ To install Distrobox, you can follow the instructions on the [official Distrobox
 sudo apt install -y curl podman
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
 ```
-
-![Inside a Distrobox container](https://github.com/IRIS-ITS/setup-ros-distrobox/raw/main/distrobox.png)
 
 ## Create a Distrobox Container
 
