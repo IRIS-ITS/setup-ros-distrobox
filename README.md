@@ -83,7 +83,7 @@ To integrate Distrobox with Visual Studio Code, you can use the Dev Containers e
 
 Being in a Flatpak, we will need access to host’s podman to be able to use the containers. We can use this wrapper to allow the Flatpak version of Visual Studio Code to access the host's Podman installation, and also set the necessary stuff for the Dev Containers extension to work properly.
 
-Place this in your ~/.local/bin/podman-host In case of access to host’s docker to be able to use the containers, use ~/.local/bin/docker-host. For example:
+Place this in your ~/.local/bin/podman-host. For example:
 
 ```bash
 curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/extras/podman-host -o ~/.local/bin/podman-host
