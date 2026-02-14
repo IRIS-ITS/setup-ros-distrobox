@@ -12,6 +12,7 @@ Instead, we can leverage containerization technology to run ROS on any distro, b
   - [Install Distrobox](#install-distrobox)
   - [Create a Distrobox Container](#create-a-distrobox-container)
   - [Setting Up `.bashrc`](#setting-up-bashrc)
+  - [Visual Studio Code Integration](#visual-studio-code-integration)
 
 # What is Distrobox?
 
@@ -72,3 +73,31 @@ if [ -n "$DISTROBOX_ENTER_PATH" ] || [ -n "$ON_DISTROBOX" ]; then
 fi
 EOF
 ```
+
+## Visual Studio Code Integration
+
+> [!WARNING]
+> Opening a Distrobox container in Visual Studio Code needs the **Flatpak version of Visual Studio Code**, which can be installed from [Flathub](https://flathub.org/apps/details/com.visualstudio.code). As of February 2026, the deb version of Visual Studio Code does not support opening Distrobox containers with the Dev Containers extension, causing the error "Failed to connect to the container". If you have the deb version of Visual Studio Code installed, you need to uninstall it and install the Flatpak version instead. Beware that Flatpak applications have limited access to the host system, so you may need to adjust the permissions for Visual Studio Code to access your files and devices.
+
+To integrate Distrobox with Visual Studio Code, you can use the Dev Containers extension. This allows you to open a folder inside a Distrobox container and work with it as if it were on your local machine. More information can be found in the [official documentation](https://distrobox.it/posts/integrate_vscode_distrobox/).
+
+Being in a Flatpak, we will need access to host’s podman to be able to use the containers. We can use this wrapper to allow the Flatpak version of Visual Studio Code to access the host's Podman installation, and also set the necessary stuff for the Dev Containers extension to work properly.
+
+Place this in your ~/.local/bin/podman-host In case of access to host’s docker to be able to use the containers, use ~/.local/bin/docker-host. For example:
+
+```bash
+curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/extras/podman-host -o ~/.local/bin/podman-host
+chmod +x ~/.local/bin/podman-host
+```
+
+Then, contuinue to installing the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers). And then, open settings (Ctrl + ,) and search for "Docker Path". Set it to the path of the wrapper script you just created, for example:
+
+```
+/home/<youruser>/.local/bin/podman-host
+```
+
+![VS Code Dev Containers settings](https://github.com/IRIS-ITS/setup-ros-distrobox/raw/main/docker-path.png)
+
+After that, you should be able to open a folder inside the Distrobox container by opening Command Palette (Ctrl + Shift + P) and searching for "Attach to Running Container". Then, select the container you want to attach to (e.g., ros1) and select the folder you want to open.
+
+![Attach to Distrobox](https://github.com/IRIS-ITS/setup-ros-distrobox/raw/main/attach-to-distrobox.png)
