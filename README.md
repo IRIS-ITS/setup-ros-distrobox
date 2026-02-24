@@ -1,4 +1,4 @@
-![Inside a Distrobox container](https://github.com/IRIS-ITS/setup-ros-distrobox/raw/main/images/distrobox.png)
+'![Inside a Distrobox container](https://github.com/IRIS-ITS/setup-ros-distrobox/raw/main/images/distrobox.png)
 
 # Setup Distrobox for ROS / ROS 2
 
@@ -78,8 +78,7 @@ EOF
 
 ## Visual Studio Code Integration
 
-> [!WARNING]
-> Opening a Distrobox container in Visual Studio Code needs the **Flatpak version of Visual Studio Code**, which can be installed from [Flathub](https://flathub.org/apps/details/com.visualstudio.code). As of February 2026, the deb version of Visual Studio Code does not support opening Distrobox containers with the Dev Containers extension, causing the error "Failed to connect to the container". If you have the deb version of Visual Studio Code installed, you need to uninstall it and install the Flatpak version instead. Beware that Flatpak applications have limited access to the host system, so you may need to adjust the permissions for Visual Studio Code to access your files and devices.
+> **WARNING:** Opening a Distrobox container in Visual Studio Code needs the **Flatpak version of Visual Studio Code**, which can be installed from [Flathub](https://flathub.org/apps/details/com.visualstudio.code). As of February 2026, the deb version of Visual Studio Code does not support opening Distrobox containers with the Dev Containers extension, causing the error "Failed to connect to the container". If you have the deb version of Visual Studio Code installed, you need to uninstall it and install the Flatpak version instead. Beware that Flatpak applications have limited access to the host system, so you may need to adjust the permissions for Visual Studio Code to access your files and devices.
 
 To integrate Distrobox with Visual Studio Code, you can use the Dev Containers extension. This allows you to open a folder inside a Distrobox container and work with it as if it were on your local machine. More information can be found in the [official documentation](https://distrobox.it/posts/integrate_vscode_distrobox/).
 
