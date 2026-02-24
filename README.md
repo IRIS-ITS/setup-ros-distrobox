@@ -1,4 +1,4 @@
-'![Inside a Distrobox container](https://github.com/IRIS-ITS/setup-ros-distrobox/raw/main/images/distrobox.png)
+![Inside a Distrobox container](https://github.com/IRIS-ITS/setup-ros-distrobox/raw/main/images/distrobox.png)
 
 # Setup Distrobox for ROS / ROS 2
 
